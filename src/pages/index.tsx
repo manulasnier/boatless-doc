@@ -68,7 +68,11 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout noFooter>
+    <Layout
+      noFooter
+      title="LESS CSS starter toolkit"
+      description="Open-source LESS CSS toolkit for web integrators: mixins, grid system, helpers, typography and form utilities. Install with npm and import in your LESS project."
+    >
       <main className={styles.main}>
         <div className={styles.hero}>
           <img

@@ -47,6 +47,23 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      {
+        name: 'description',
+        content: 'boatless is an open-source LESS CSS starter toolkit for web integrators. Mixins, grid system, helpers, typography and form utilities — ready to import.',
+      },
+      { name: 'keywords', content: 'LESS CSS, CSS toolkit, CSS mixins, CSS grid, web integrator, frontend, boatless, npm package, LESS starter' },
+      { name: 'author', content: 'Manu Lasnier' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://boatless.manulasnier.com' },
+      { property: 'og:title', content: 'boatless — LESS CSS starter toolkit' },
+      { property: 'og:description', content: 'Open-source LESS CSS toolkit: mixins, grid system, helpers and typography utilities for web integrators.' },
+      { property: 'og:image', content: 'https://boatless.manulasnier.com/img/og-image.svg' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'boatless — LESS CSS starter toolkit' },
+      { name: 'twitter:description', content: 'Open-source LESS CSS toolkit: mixins, grid system, helpers and typography utilities for web integrators.' },
+      { name: 'twitter:image', content: 'https://boatless.manulasnier.com/img/og-image.svg' },
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
