@@ -51,7 +51,13 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'boatless',
+      title: '',
+      logo: {
+        alt: 'boatless logo',
+        src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
+        height: 40,
+      },
       items: [
         {
           type: 'docSidebar',
