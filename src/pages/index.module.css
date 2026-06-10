@@ -58,8 +58,9 @@
 
 .copyIcon {
   font-size: 1.3rem;
-  opacity: 0.6;
+  opacity: 1;
   line-height: 1;
+  color: var(--ifm-color-primary);
 }
 
 .cta {
