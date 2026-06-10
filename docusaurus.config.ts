@@ -36,7 +36,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/manulasnier/boatless-doc/tree/main/',
-          routeBasePath: '/',
+          routeBasePath: '/docs',
         },
         blog: false,
         theme: {
@@ -64,6 +64,7 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+          docsPluginId: 'default',
         },
         {
           href: 'https://github.com/manulasnier/boatless',
@@ -83,10 +84,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Getting Started', to: '/'},
-            {label: 'Variables', to: '/variables'},
-            {label: 'Mixins', to: '/mixins'},
-            {label: 'Layout', to: '/mixins/layout'},
+            {label: 'Getting Started', to: '/docs'},
+            {label: 'Variables', to: '/docs/variables'},
+            {label: 'Mixins', to: '/docs/mixins'},
+            {label: 'Layout', to: '/docs/mixins/layout'},
           ],
         },
         {
