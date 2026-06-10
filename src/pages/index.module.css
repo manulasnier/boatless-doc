@@ -3,6 +3,11 @@
   flex-direction: column;
   min-height: calc(100vh - var(--ifm-navbar-height));
   overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff 0%, #cce8f6 55%, #8dcde8 100%);
+}
+
+[data-theme='dark'] .main {
+  background: linear-gradient(to bottom, #0f1f35 0%, #0d3a5e 55%, #1167a0 100%);
 }
 
 .hero {
