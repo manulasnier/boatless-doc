@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Head from '@docusaurus/Head';
 import styles from './index.module.css';
 
 function CopyCommand() {
@@ -68,11 +68,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <>
-      <Head>
-        <title>{siteConfig.title} — LESS CSS starter toolkit</title>
-        <meta name="description" content={siteConfig.tagline} />
-      </Head>
+    <Layout noFooter>
       <main className={styles.main}>
         <div className={styles.hero}>
           <img
@@ -88,6 +84,6 @@ export default function Home() {
         </div>
         <WaveWithBoat />
       </main>
-    </>
+    </Layout>
   );
 }
