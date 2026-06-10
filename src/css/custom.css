@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
 :root {
   --ifm-color-primary: #1d71b8;
   --ifm-color-primary-dark: #1a66a6;
@@ -8,7 +10,8 @@
   --ifm-color-primary-lightest: #3494e0;
   --ifm-code-font-size: 90%;
   --docusaurus-highlighted-code-line-bg: rgba(29, 113, 184, 0.08);
-  --ifm-font-family-base: system-ui, -apple-system, sans-serif;
+  --ifm-font-family-base: 'Poppins', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   --ifm-navbar-height: 60px;
 }
 
