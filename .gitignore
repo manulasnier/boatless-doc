@@ -11,6 +11,7 @@ docs/_changelog_content.md
 
 # Misc
 .DS_Store
+.claude/
 .env.local
 .env.development.local
 .env.test.local
