@@ -25,6 +25,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
+      id: 'components',
+      label: 'Components',
+    },
+    {
+      type: 'doc',
       id: 'grid',
       label: 'Grid System',
     },
