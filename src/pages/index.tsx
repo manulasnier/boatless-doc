@@ -81,6 +81,7 @@ export default function Home() {
             className={styles.logo}
           />
           <p className={styles.tagline}>LESS CSS starter toolkit for web integrators</p>
+          <CopyCommand />
           <Link className={styles.cta} to="/docs">
             Get Started
           </Link>
