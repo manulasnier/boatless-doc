@@ -45,7 +45,7 @@ Defines the button structure, sizing, and behavior.
 
 | Class | Effect |
 |-------|--------|
-| `.only-picto` | Square icon-only button (width = height) |
+| `.only-picto` | Square icon-only button (width = height) — see [responsive variants](#responsive-only-picto) |
 | `.round` | Fully circular (`border-radius: 50%`) |
 | `.disabled` / `:disabled` | Dimmed, `cursor: not-allowed` |
 | `.nohov` | Disables hover state |
@@ -55,6 +55,63 @@ Defines the button structure, sizing, and behavior.
   .btn-base(44px, 18px, 22px);
 }
 ```
+
+#### Responsive only-picto
+
+Since v0.0.8, `.only-picto` can be scoped to a breakpoint, so a button keeps its
+label on wide screens and collapses to its icon only when space gets tight.
+
+Add a `-{bp}` suffix for a media query:
+
+```html
+<button class="btn only-picto-laptop">
+  <i class="fa fa-user"></i>
+  <span>My account</span>
+</button>
+```
+
+The button stays full width above `1023px`, and becomes a square icon-only button at
+`1023px` and below.
+
+Use `-c-{bp}` for a container query instead:
+
+```html
+<button class="btn only-picto-c-tablet">
+  <i class="fa fa-user"></i>
+  <span>My account</span>
+</button>
+```
+
+Available breakpoints: `desktop-xxl`, `desktop-wide`, `desktop`, `laptop`, `tablet`,
+`mobile`, `xmobile`.
+
+:::info
+The variants are generated inside `.btn-base()`, so they automatically reuse the
+`@height` you passed to the mixin. With `.btn-base(44px)`, `.only-picto-laptop`
+compiles to:
+
+```css
+@media (max-width: 1023px) {
+  .btn.only-picto-laptop {
+    max-width: 44px;
+    width: 44px;
+    padding: 0;
+  }
+}
+```
+:::
+
+:::tip
+Hide the label yourself with the [hide helpers](./helpers) — `.only-picto-{bp}` only
+handles the button box:
+
+```html
+<button class="btn only-picto-laptop">
+  <i class="fa fa-user"></i>
+  <span class="hide-laptop">My account</span>
+</button>
+```
+:::
 
 ---
 

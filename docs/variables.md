@@ -59,7 +59,7 @@ Each breakpoint exposes a `max-width` media query variable:
 
 ## Touch devices
 
-The `@touch` variable targets devices without hover capability and with a coarse pointer — touchscreens (phones, tablets, hybrid devices in tablet mode).
+Since v0.0.8, the `@touch` variable targets devices without hover capability and with a coarse pointer — touchscreens (phones, tablets, hybrid devices in tablet mode).
 
 ```less
 @touch: ~"(hover: none) and (pointer: coarse)";
