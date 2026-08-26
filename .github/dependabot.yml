@@ -1,0 +1,37 @@
+version: 2
+
+updates:
+  # Docusaurus drags in a large tree, so bumps are grouped by risk rather than
+  # by package: patches land as one PR, minors as another, and majors arrive
+  # alone because they are the ones that break a build
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: build(deps)
+      prefix-development: build(deps)
+    groups:
+      patches:
+        patterns:
+          - "*"
+        update-types:
+          - patch
+      minors:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns:
+          - "*"
