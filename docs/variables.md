@@ -57,6 +57,57 @@ Each breakpoint exposes a `max-width` media query variable:
 }
 ```
 
+## Touch devices
+
+The `@touch` variable targets devices without hover capability and with a coarse pointer — touchscreens (phones, tablets, hybrid devices in tablet mode).
+
+```less
+@touch: ~"(hover: none) and (pointer: coarse)";
+```
+
+Unlike breakpoints, it is based on **input capability**, not viewport width. A narrow desktop window stays non-touch; a large tablet stays touch.
+
+### Usage in your LESS
+
+```less
+.my-button {
+  padding: 8px 16px;
+
+  &:hover {
+    background: #eee;
+  }
+
+  // Bigger tap target, drop the hover state
+  @media @touch {
+    padding: 14px 20px;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
+```
+
+It can be combined with a breakpoint when both conditions matter:
+
+```less
+@media @touch and @tablet {
+  .my-nav {
+    display: none;
+  }
+}
+```
+
+Compiles to:
+
+```css
+@media (hover: none) and (pointer: coarse) and (max-width: 767px) {
+  .my-nav {
+    display: none;
+  }
+}
+```
+
 ## CSS custom properties
 
 Since v0.0.7, boatless uses CSS custom properties alongside LESS variables. Define them in your project:
