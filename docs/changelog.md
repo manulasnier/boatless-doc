@@ -11,6 +11,19 @@ Fetched automatically from the [boatless repository](https://github.com/manulasn
 
 <Changelog entries={[
   {
+    version: '0.0.8',
+    date: '2026-08-26',
+    sections: [
+      { type: 'Added', items: [
+        'Add @touch media variable to target touch devices (hover: none / pointer: coarse)',
+        'Add responsive only-picto on btn-base, with media and container declinations'
+      ]},
+      { type: 'Changed', items: [
+        'Switch webpack config to ESM (webpack.config.mjs)'
+      ]}
+    ]
+  },
+  {
     version: '0.0.7',
     date: '2026-05-07',
     sections: [
