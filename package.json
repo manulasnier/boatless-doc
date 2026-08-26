@@ -7,13 +7,15 @@
     "start": "docusaurus start",
     "prebuild": "node scripts/fetch-changelog.mjs",
     "build": "docusaurus build",
+    "postbuild": "node scripts/check-links.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "check-links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
